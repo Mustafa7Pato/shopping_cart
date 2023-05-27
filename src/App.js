@@ -98,14 +98,15 @@ class App extends Component {
       { id: 3, name: "Kranchy", count: 1, price: 10 },
       { id: 4, name: "Cigarates", count: 1, price: 30 },
     ];
-    this.setState({ products });
+    document.body.style.backgroundColor = "white";
+    this.setState({ products, bg: true });
   };
   reset = () => {
     let products = this.state.products;
     products = products.map((product) => {
       return {
         ...product,
-        count: 1,
+        count: 0,
       };
     });
     this.setState({ products });
